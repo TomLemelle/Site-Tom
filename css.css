@@ -1,4 +1,5 @@
 body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #background{
@@ -36,6 +37,68 @@ body{
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: minmax(145px, auto);
+  height: 16  3px;
+  width: 100%;
+}
+
+#diplome{
+  display: grid;
+  grid-template-rows: minmax(145px, auto);
+  font-size: 1.5em;
+  text-align: center;
+  font-style: italic;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+
+#background3{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(145px, auto);
   height: 143px;
   width: 100%;
+  margin-top: -45px;
+}
+
+#compétences{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(145px, auto);
+  margin-top: 13px;
+  grid-column-start: 2;
+}
+
+
+#background4{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(145px, auto);
+  width: 100%;
+  grid-column-start: 1;
+}
+
+
+#tom{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(145px, auto);
+  grid-column-start: 2;
+  width: 150px;
+  border-radius: 20%;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+}
+
+#tom:hover{
+  -webkit-transform:rotate(180deg);
+  -moz-transform:rotate(180deg); 
+  -o-transform:rotate(180deg);
 }
