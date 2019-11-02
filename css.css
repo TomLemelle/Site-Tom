@@ -70,7 +70,9 @@ body{
 }
 
 
-#background4{
+.bottom{
+  background-image: url('background4.png');
+  background-repeat: no-repeat;
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: minmax(145px, auto);
