@@ -71,7 +71,7 @@ body{
 
 #background4{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 20%;
   grid-auto-rows: minmax(145px, auto);
   grid-column-start: 1;
   width: 100%;
