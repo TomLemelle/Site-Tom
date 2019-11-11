@@ -27,7 +27,8 @@ body{
   font-size: 1.5em;
   text-align: center;
   font-style: italic;
-  padding: 5px;
+  padding-top: 20px;
+  align-items: center;
 }
 
 #background2{
@@ -58,13 +59,18 @@ body{
   margin-top: -45px;
 }
 
-#compétences{
+#competencespro{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: minmax(145px, auto);
+}
+
+#compétences{
   margin-top: 13px;
   grid-column-start: 2;
+  align-self: center;
+
 }
+
 
 #bloc-footer{
   display: grid;
@@ -159,5 +165,120 @@ body{
   font-style: italic;
   font-size: 1.4em;
   text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);;
-
 }
+
+/*tablette*/
+
+@media only screen and (min-width: 768px) {
+  #nws{
+    justify-self: center;
+  }
+  #citation{
+    font-size: 2em;
+  }
+
+  #diplome{
+    padding-bottom: 18px;
+    font-size: 2em;
+  }
+
+  #background3{
+    height: 282px;
+  }
+
+  #competencespro{
+    grid-auto-columns: 1fr 1fr 1fr;
+  }
+
+  #compétences{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+    width: 55%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #bloc-footer{
+    height: 271px;
+  }
+  
+  #tom{
+    width: 65%;
+    border-radius: 50%;
+    align-self: center;
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 7;
+    box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, .2);
+  }
+  
+  #paragraphe2{
+    font-size: 3em;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+  }
+  .rc{
+    width: 18.5%;
+    align-self: center;
+    justify-self: center;    
+  }
+  
+  #rotate1{
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out; 
+  }
+  
+  #rotate1:hover{
+    -webkit-transform: rotate(360deg);
+     transform: rotate(360deg);
+  }
+  
+  #rotate2{
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out; 
+  }
+  
+  #rotate2:hover{
+    -webkit-transform: rotate(360deg);
+     transform: rotate(360deg);
+  }
+  
+  #rotate3{
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out; 
+  }
+  
+  #rotate3:hover{
+    -webkit-transform: rotate(360deg);
+     transform: rotate(360deg);
+  }
+  
+  .bloc-rc{
+    margin-top: -20px;
+    align-self: center;
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 7;
+  }
+  
+  #phone{
+    align-self: center;
+    justify-self: center;
+    grid-column-start: 6;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 7;
+  }
+  
+  .number{
+    font-family: 'Segoe UI', sans-serif;
+    font-style: italic;
+    font-size: 1.4em;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);;
+  }
+  
+}
+
