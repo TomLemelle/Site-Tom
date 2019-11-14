@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 html, body{
     padding: 0;
     margin: 0;
@@ -18,6 +23,7 @@ h1{
 p{
     text-align: justify;
     padding: 10px;
+    margin-bottom: 0;
 }
 
 li{
@@ -33,12 +39,16 @@ a{
 a:hover{
     text-decoration: none;
 }
+img{
+    padding: 10px;
+    vertical-align: middle;
+}
 
 
 /* mise en page */
 
 #logo_accroche{
-    background: rgb(52, 201, 36);
+    background: #49C55B;
     background-size: cover;
     height: 80px;
     border-bottom: 1px solid black;
@@ -59,7 +69,7 @@ a:hover{
 #header{
     margin: 0;
     padding: 0;
-    background: rgb(52, 201, 36);
+    background: #49C55B;
     background-size: cover;
     height: 80px;
     display: grid;
@@ -132,9 +142,70 @@ a:hover{
 
 #presentation{
     display: grid;
+    color: black;
+    margin: 0;
+    padding: 0;
 }
 
 #titre_presentation{
+    padding-top: 10px;
+    justify-self: center;
+    align-self: center;
+    color: black;
+}
+
+#paragraphe_presentation{
+    justify-self: center;
     align-self: center;
 }
 
+#item_img1{
+    display: grid;
+}
+
+#img1{
+    justify-self: center;
+    align-self: center;
+}
+
+
+/* pied de page */
+
+#footer{
+    display: grid;
+    background: #696969;
+    background-size: cover;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr; 
+}
+
+#img_tom{
+    width: 100%;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    align-self: center;
+    justify-self: center;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#rc{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    align-self: center;
+    justify-self: center;
+}
+
+#credits{
+    margin-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-self: start;
+    border-top: 1px solid #3b9842;
+}
+
+#credits_image{
+    text-align: center;
+}
