@@ -1,0 +1,44 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+
+/* css balaise */ 
+
+img{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+    padding: 10px;
+}
+
+li{
+    list-style: none;
+    display: inline;
+}
+
+
+
+/* mise en page */
+
+#header{
+    background: rgb(120, 197, 43);
+    background-size: cover;
+}
+
+#logo{
+    padding: 0;
+    margin: 0;
+}
+
+#accroche{
+    padding: 0;
+    margin: 0;
+}
