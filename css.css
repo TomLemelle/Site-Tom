@@ -126,5 +126,15 @@ a:hover{
 .liens_btn_top:hover{
     color: black;
     text-shadow: 2px 2px 2px white;
-
 }
+
+/* présentation */
+
+#presentation{
+    display: grid;
+}
+
+#titre_presentation{
+    align-self: center;
+}
+
