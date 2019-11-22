@@ -1,3 +1,5 @@
+/* reset */
+
 *{
     margin: 0;
     padding: 0;
@@ -9,7 +11,7 @@ html, body{
 }
 
 
-/* css balaise */ 
+/* css balise */
 
 img{
     width: 100%;
@@ -39,13 +41,19 @@ a{
 a:hover{
     text-decoration: none;
 }
+
 img{
     padding: 10px;
     vertical-align: middle;
 }
 
 
-/* mise en page */
+/* mise en page header*/
+
+#bandeau-top{
+    position: fixed;
+    width: 100%;
+}
 
 #logo_accroche{
     background: #b1dccb;
@@ -53,16 +61,6 @@ img{
     height: 80px;
     border-bottom: 1px solid black;
     display: grid;
-}
-
-#navigation1{
-    justify-self: center;
-    align-self: center;
-}
-
-#navigation1{
-    justify-self: center;
-    align-self: center;
 }
 
 
@@ -80,13 +78,17 @@ img{
 #logo{
     color: white;
     text-shadow: 3px 3px 2px black;
+    justify-self: center;
+    align-self: center;
+
 }
 
 #accroche{
     color: white;
     text-shadow: 2px 2px 2px black;
+    justify-self: center;
+    align-self: center;
 }
-
 
 
 #navigation3{
@@ -152,13 +154,18 @@ img{
     justify-self: center;
     align-self: center;
     color: black;
+    margin-top: 160px
 }
 
 #paragraphe_presentation{
     justify-self: center;
     align-self: center;
+    margin-top: -5px;
 }
 
+.p_span{
+    font-style: italic;
+}
 #item_img1{
     display: grid;
 }
@@ -176,7 +183,7 @@ img{
     background: #696969;
     background-size: cover;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
 }
 
 #img_tom{
@@ -209,3 +216,169 @@ img{
 #credits_image{
     text-align: center;
 }
+
+/* @media queries : au dessus de 800px */
+
+@media (min-width: 1000px){
+
+    /* balises  */
+
+   a{
+       font-size: 30px;
+   }
+
+
+    /* css responsive */
+
+    #logo{
+        font-size: 30px;
+    }
+
+    #accroche{
+        font-size: 18px;
+    }
+
+
+    #presentation{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 200px 1fr;
+     grid-template-areas: "titre titre"
+                          "paragraphe image";
+     justify-items: center;
+     align-items: center;
+ }
+
+    #titre_presentation{
+        grid-area: titre;
+    }
+
+    #paragraphe_presentation{
+        grid-area: paragraphe;
+        padding-left: 45px;
+        padding-right: 45px;
+
+    }
+
+    #item_img1{
+        grid-area: image;
+    }
+
+    #formation{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 70px 1fr;
+        grid-template-areas: "titre titre"
+        "paragraphe image";
+        justify-items: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #titre_formation{
+        margin: 0;
+        padding: 0;
+        grid-area: titre;
+    }
+
+    #paragraphe_formation{
+        grid-area: paragraphe;
+        padding-left: 45px;
+        padding-right: 45px;
+        line-height: 3em;
+
+    }
+
+    #item_img2{
+        grid-area: image;
+    }
+
+    #citation{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 70px 1fr;
+        grid-template-areas: "titre titre"
+        "paragraphe image3";
+        justify-items: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #titre_citation{
+        grid-area: titre;
+    }
+
+    #paragraphe_citation{
+        margin: 0;
+        padding: 0;
+        grid-area: paragraphe;
+        padding-left: 45px;
+        padding-right: 45px;
+        font-style: italic;
+    }
+
+    .angelina{
+        font-style: normal;
+    }
+
+    #item_img3{
+        grid-area: image3;
+    }
+
+    #texte_video{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 70px 1fr;
+        grid-template-areas: "titre titre"
+        "paragraphe image_video";
+        justify-items: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #titre_texte_video{
+        grid-area: titre;
+    }
+
+    #paragraphe_texte_video{
+        margin: 0;
+        padding: 0;
+        grid-area: paragraphe;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    #img_video{
+        grid-area: image_video;
+    }
+
+
+
+  #footer{
+
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr 1fr;
+        grid-template-rows: 400px;
+        grid-template-areas: "image_footer rc credits";
+
+  }
+
+  #photo_rc{
+      width: 50%;
+      height: auto;
+      grid-area: image_footer, rc;
+  }
+
+  #credits{
+      position: relative;
+      grid-area: credits;
+  }
+
+    .imagerc{
+    width: 100%;
+    }
+}
+
