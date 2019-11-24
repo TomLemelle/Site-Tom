@@ -5,22 +5,25 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            <link rel="stylesheet" href="css.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="css/css.css">
             <title>Mon site perso</title>
        </head>
 
-        <body>
+    <body>
+      <div class="main">
+        <div class="content">
          <header id="bandeau-top">
             <div id="logo_accroche">
                 <p id="logo">Tom</p>
                 <p id="accroche">S'il y a de la volonté, il y a Tom</p>
             </div>
 
-            <div id="header">
-                <a href="#" id="navigation3" class="liens_btn_top">Vidéo</a>
+            <nav id="header">
+                <a href="#" id="navigation3" class="liens_btn_top">Vidéeo</a>
                 <a href="#" id="navigation4" class="liens_btn_top">Cv</a>
                 <a href="#" id="navigation5" class="liens_btn_top">Informations</a>
-            </div>
+            </nav>
          </header>
 
         <div id="presentation">
@@ -44,7 +47,7 @@
             </p>
 
             <div id="item_img1">
-                <img src="image1.jpg" alt="image1" id="img1">
+                <img src="img/image1.jpg" alt="image1" id="img1">
             </div>
         </div>
 
@@ -56,7 +59,7 @@
                 -2018 Baccalauréat professionnel ﬁlière SEN ( système électronique numérique)<br>
             </p>
             <div id="item_img2">
-                    <img src="image2.jpg" alt="image1" id="img2">
+                    <img src="img/image2.jpg" alt="image1" id="img2">
             </div>
          </div>
 
@@ -68,37 +71,58 @@
 
 
             <div id="item_img3">
-                <img src="image3.jpg" alt="image1" id="img3">
+                <img src="img/image3.jpg" alt="image1" id="img3">
             </div>
         </div>
 
         <div id="texte_video">
             <h1 id="titre_texte_video">Présentation vidéo</h1>
-            <p id="paragraphe_texte_video">Lorem ipsum,
-                dolor sit amet consectetur adipisicing elit.
-                Velit quos laudantium, blanditiis inventore
-                itaque incidunt quis! Eos sit autem minima
-                itaque esse, eius ex illum!
+            <p id="paragraphe_texte_video">
+            La vidéo est un ensemble de techniques permettant l'enregistrement accompagnés
+            ou non de son pour le côté dynamique de la vidéo.
+            Étymologiquement, le mot : « vidést un mot latin, qui signifie : « je vois ».
+            La vidéo regroupe plusieurs corps de métiers comme réalisateur, cameraman,
+            monteur vidéo, créateurs d'effets spéciaux et aussi étalonneur, il y a encore
+            beaucoup d'autres métiers très intéressants, ce métier permet travailler dans
+            le monde du cinéma. La vidéo est une de mes passions principales car on peut exprimer
+            sa créativité, sa volonté, ou alors son style.
+            J'aimerais pouvoir apprendre la vidéo à d'autres personnes par le biais d'une
+            plate-forme numérique telle que youtube, pour pouvoir partager sa passion à
+            plusieurs personnes, sans même les connaître.
+
             </p>
             <div id="img_video">
-                <img src="https://via.placeholder.com/400x400" alt="image video" id="image_video">
+                <img src="img/image_video.jpg" alt="image video" id="image_video">
             </div>
         </div>
-        <footer id="footer">
-                <div id="photo_rc">
-                    <img src="tom.png" alt="tom" id="image_tom">
-                    <a class="reseauxsociaux" href="#"><img src="fb.png" alt="facebook" class="imagerc"></a>
-                    <a class="reseauxsociaux" href="#"><img src="in.png" alt="linkedin" class="imagerc"></a>
-                </div>
+      </div>
+        <footer class="footer">
+          <div class="container-top">
+            <h2 class="tom_lemelle">Tom LEMELLE</h2>
+              <div class="links_rc">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+             </div>
+          </div>
 
-                <div id="credits">
-                    <p id="credits_image">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, in!
-                        ipsum dolor sit amet consectetur, adipisicing elit. Totam, in!
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, in!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, in!
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, in!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, in!</p>
-                </div>
+          <div class="container-bottom">
+            <div class="img">
+              <img src="https://via.placeholder.com/300x300" alt="photo" class="photo_tom">
+            </div>
+            <div class="item_credit">
+              <h4 class="credits">
+                Jakob Owens pour les photos: <br><a href="http://www.directorjakobowens.com">Jakob Owens</a><br>
+                Chris Murray pour la photo: <br><a href="https://www.chrismurrayphotography.com">Chris Murray</a><br>
+                Aide au design: <br><a href="https://www.linkedin.com/in/chloé-delamarre-316713180/">Chloe Delamarre</a><br>
+                Aide aux couleurs du site: &nbsp;<br><a href="https://www.linkedin.com/in/lucile-alves-e-silva-11aa28196/">Lucile Alves</a>
+              </h4>
+            </div>
+            <div class="item_copyright">
+              <p class="copyright">&copy;&nbsp;All Right Reserved&nbsp;&nbsp;|&nbsp;&nbsp;2019-2020</p>
+            </div>
+          </div>
         </footer>
-         </script>
+      </div>
     </body>
 </html>
