@@ -8,6 +8,7 @@
 html, body{
     padding: 0;
     margin: 0;
+    font-family: "Bebas Neue";
 }
 
 
@@ -40,6 +41,7 @@ a{
 
 a:hover{
     text-decoration: none;
+    color: white;
 }
 
 img{
@@ -176,46 +178,87 @@ img{
 }
 
 
+
+
 /* pied de page */
 
-#footer{
-    display: grid;
-    background: #696969;
-    background-size: cover;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+.footer{
+  background-color: #292c2f;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
 }
 
-#img_tom{
-    width: 100%;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    align-self: center;
-    justify-self: center;
-    padding-left: 10px;
-    padding-top: 10px;
+.links_rc > a{
+  padding-left: 30px;
+  padding-right: 30px;
+  color: red;
 }
 
-#rc{
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 2;
-    grid-column-end: 2;
-    align-self: center;
-    justify-self: center;
+.tom_lemelle{
+  text-align: center;
+  margin-top: 15px;
 }
 
-#credits{
-    margin-top: 10px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    align-self: start;
-    border-top: 1px solid #3b9842;
+
+
+.fa{
+  background-color: #292c2f;
+  padding: 10px;
+  border: 1px solid black;
+  transition: background-color 1s;
+  color: white;
 }
 
-#credits_image{
-    text-align: center;
+.fa:hover{
+  background-color: #D12C53;
+  transform: scale(1.2);
+  color: #292c2f;
 }
+
+.img{
+  justify-self: center;
+}
+
+.container-bottom{
+  padding: 20px;
+  padding-bottom: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.item_credit{
+  padding-top: 14px;
+}
+
+.credits{
+  text-align: center;
+  margin: 0px;
+}
+
+.credits > a{
+  color: #ffffff;
+  font-size: 19px;
+  text-decoration: underline;
+}
+
+.item_copyright{
+  margin-top: 15px;
+}
+
+.copyright{
+  text-align: center;
+  margin: 0;
+  font-size: 15px;
+  color: #8f9296;
+}
+
 
 /* @media queries : au dessus de 800px */
 
@@ -354,31 +397,3 @@ img{
     #img_video{
         grid-area: image_video;
     }
-
-
-
-  #footer{
-
-        display: grid;
-        grid-template-columns: 0.5fr 0.5fr 1fr;
-        grid-template-rows: 400px;
-        grid-template-areas: "image_footer rc credits";
-
-  }
-
-  #photo_rc{
-      width: 50%;
-      height: auto;
-      grid-area: image_footer, rc;
-  }
-
-  #credits{
-      position: relative;
-      grid-area: credits;
-  }
-
-    .imagerc{
-    width: 100%;
-    }
-}
-
