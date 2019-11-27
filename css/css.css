@@ -59,7 +59,7 @@ img{
 }
 
 #logo_accroche{
-    background: #b1dccb;
+    background: #292c2f;
     background-size: cover;
     height: 80px;
     border-bottom: 1px solid black;
@@ -70,7 +70,7 @@ img{
 #header{
     margin: 0;
     padding: 0;
-    background: #b1dccb;
+    background: #292c2f;
     background-size: cover;
     height: 80px;
     display: grid;
@@ -136,11 +136,14 @@ img{
 
 .liens_btn_top{
     text-shadow: 2px 2px 2px black;
+    transition: background-color 1s;
+    transition: transform 1s;
 }
 
 .liens_btn_top:hover{
-    color: black;
-    text-shadow: 2px 2px 2px white;
+  color: white;
+  transform: scale(1.2);
+
 }
 
 /* présentation */
@@ -412,6 +415,7 @@ img{
     }
 
     /* footer */
+
 #footer{
   flex-flow: row wrap;
 }
