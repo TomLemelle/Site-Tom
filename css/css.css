@@ -427,3 +427,35 @@ img{
 }
 
 }
+@media (max-width: 375px) {
+  #logo_accroche{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #header{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #presentation{
+    margin-top: 25px;
+  }
+}
+
+@media (max-width:190px){
+
+  #presentation{
+    margin-top: 40px;
+  }
+}
