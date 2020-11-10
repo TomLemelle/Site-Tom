@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.main-whos-us {
+  margin-top: 100px;
+}
+
+.menu-navigation {
+  position: fixed !important;
+}
+
+.title-whos-us {
+  margin-bottom: 15px;
+}
+.title-whos-us h1 {
+  color: #023F88;
+  border-bottom: 1px solid #000;
+}
+
+.description-whos-us {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #023F88;
+  padding-bottom: 15px;
+}
+
+.last-desc {
+  margin-bottom: 50px;
+  border: none;
+}
+
+.footer li:nth-of-type(2) {
+  margin-bottom: 0;
+}
+
+.svg-footer {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.map, .telephone, .mail {
+  width: 40px;
+  height: 40px;
+  max-width: 40px !important;
+  min-width: 40px !important;
+}
+
+.ul-right li:last-of-type {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=a_propos.css.map */

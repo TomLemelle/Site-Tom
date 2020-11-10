@@ -1,0 +1,1083 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Open Sans", sans-serif;
+  color: #000;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  padding: 0.5em 2em 0.5em 0.9em;
+  cursor: pointer;
+  color: #465158;
+  font-family: inherit;
+  font-size: 1em;
+  border: 1px solid #cfd2db;
+  background-color: #fafafa;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzIwMCcgZmlsbD0iIzAwMDAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHg9IjBweCIgeT0iMHB4Ij48cGF0aCBmaWxsPSIjMDAwMDAwIiBkPSJNMTIgMThsLTExLjAxOS0xMWgyMi4wMzh6Ii8+PC9zdmc+);
+  background-size: 0.8em;
+  background-repeat: no-repeat;
+  background-position: calc(100% - .4em) center;
+}
+
+.header {
+  width: auto;
+  height: auto;
+}
+
+.nav_item {
+  display: none;
+}
+
+.menu__navigation {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(44, 44, 44, 0.5);
+  width: 100%;
+  padding: 10px 0px;
+  z-index: 1000;
+}
+
+.logo {
+  width: 215px;
+}
+
+.nav__links {
+  color: #FFF;
+  margin: 10px 10px;
+  text-transform: uppercase;
+}
+.nav__links:hover {
+  color: #FED51B;
+}
+
+.nav-moving {
+  transition: padding 250ms ease-in-out;
+  padding: 0px 0px;
+}
+
+.nav-telephone {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(44, 44, 44, 0.5);
+}
+.nav-telephone img {
+  width: 100px;
+}
+
+.menu {
+  width: 95%;
+  height: auto;
+  background: #023F88;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  transition: transform 250ms ease-in-out;
+  transform: translateY(-150%);
+  border: 2px solid #fff;
+}
+.menu li {
+  list-style: none;
+  margin: 50px 0;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.menu li a {
+  color: #fff;
+}
+.menu li a:hover {
+  color: #FED51B;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+}
+
+.animation-menu {
+  transition: transform 250ms ease-in-out;
+  transform: translateY(-27%);
+}
+
+.toggle-hamburger {
+  z-index: 50;
+  position: relative;
+  height: 20px;
+  width: 25px;
+  background: none;
+  top: 0;
+}
+
+.hamburger {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: #fff;
+  top: 8px;
+}
+.hamburger::before, .hamburger::after {
+  background: #FFF;
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 4px;
+}
+.hamburger::before {
+  top: -8px;
+  transition: transform 250ms ease-in-out;
+}
+.hamburger::after {
+  top: 8px;
+  transition: transform 250ms ease-in-out;
+}
+
+.hamburger-animation {
+  background: transparent;
+  transition: all 250ms ease-in-out;
+}
+.hamburger-animation::before, .hamburger-animation::after {
+  top: 0;
+  background: #fff;
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 4px;
+}
+.hamburger-animation::before {
+  transform: rotate(45deg);
+}
+.hamburger-animation::after {
+  transform: rotate(-45deg);
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #2f1e1e;
+  -webkit-box-shadow: 0px -8px 18px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -8px 18px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -8px 18px -1px rgba(0, 0, 0, 0.75);
+}
+.footer .footer-container {
+  margin: 0 auto;
+  max-width: 80%;
+}
+.footer .footer__ul {
+  padding: 25px;
+}
+.footer li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.footer .ul__left a {
+  font-family: "Montserrat", sans-serif;
+  margin-left: 15px;
+  border-bottom: 1px solid #fff;
+}
+.footer .ul__left h1 {
+  color: #FED51B;
+}
+.footer .ul__left h1 .mot__2 {
+  color: #023F88;
+  text-shadow: #FFFFFF 1px 1px, #FFFFFF -1px 1px, #FFFFFF -1px -1px, #FFFFFF 1px -1px;
+}
+.footer .ul__left h1 .mot__3 {
+  color: white;
+}
+.footer p {
+  color: #FED51B;
+}
+.footer h3 {
+  color: #fff;
+}
+.footer .ul__right {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.footer .ul__right h3 {
+  margin: 0;
+}
+.footer .svg__footer {
+  width: 30px;
+  height: 30px;
+  color: #FED51B;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 8px;
+}
+.footer .map, .footer .telephone, .footer .mail {
+  max-width: 30px;
+  min-width: 30px;
+}
+
+.hr__footer {
+  border-bottom: 2px solid #FED51B;
+  margin-bottom: 0;
+}
+
+.hr__ul__right {
+  width: 1px;
+  height: 20px;
+  color: #fff;
+  background: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .menu li a {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav_item {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    opacity: 1;
+  }
+
+  .menu__navigation {
+    display: none;
+  }
+}
+.container__margin {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.div__tellus {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.div__tellus h1 {
+  color: #023F88;
+  margin-top: 0;
+}
+.div__tellus p {
+  margin-bottom: 5px;
+}
+.div__tellus a {
+  color: #FED51B;
+}
+
+.raisons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+.raisons .item__raisons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 50px;
+  text-align: center;
+}
+.raisons .item__raisons .svg__raisons {
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  width: 100px;
+  height: 100px;
+}
+.raisons .item__raisons h3 {
+  color: #FED51B;
+  font-family: "Code Bold", sans-serif;
+}
+
+.stars {
+  font-size: 2em;
+}
+
+.header__photoBaseline {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.photoBaseline {
+  width: 100%;
+}
+
+.recherche__agences {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.decouvrez__agences {
+  background: #023F88;
+  padding: 10px 100%;
+  color: #fff;
+  white-space: nowrap;
+  position: relative;
+}
+.decouvrez__agences .triangle__h3 {
+  left: 50%;
+  bottom: -12px;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 14px solid transparent;
+  border-left: 14px solid transparent;
+  border-top: 18px solid #023F88;
+}
+
+#form__index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+input, select {
+  margin: 10px 0;
+  height: 40px;
+  border: 1px solid #023F88;
+}
+
+input[type=submit], button[type=submit] {
+  color: white;
+  font-size: 20px;
+  border: none;
+  background: #023F88;
+  transition: all ease 500ms;
+}
+input[type=submit]:hover, button[type=submit]:hover {
+  background: #FED51B;
+}
+
+.select__input2 {
+  display: none;
+}
+
+.submit2 {
+  display: none;
+}
+
+.entreprise__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.entreprise__left p {
+  margin-bottom: 40px;
+}
+
+.jaune {
+  width: 120px;
+  height: 120px;
+  background: #FED51B;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jaune:first-child {
+  margin-top: 35px;
+}
+
+#premier {
+  font-size: 60px;
+}
+
+.entreprise__left__telephone {
+  display: none;
+}
+
+.entreprise__right img {
+  width: 100%;
+}
+
+.modeles {
+  margin-top: 70px;
+  background: #023F88;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+.modeles h2 {
+  color: #fff;
+  font-size: 19px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modele__editable {
+  margin-bottom: 10px;
+}
+.modele__editable img {
+  width: 100%;
+}
+
+.village__3d {
+  margin-top: 10px;
+}
+.village__3d img {
+  width: 100%;
+}
+
+.fleche {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  max-width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FED51B;
+}
+.fleche img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+.fleche img {
+  transition: all ease 250ms;
+  transform: rotate(0deg);
+}
+.fleche img:hover {
+  transform: rotate(90deg);
+}
+
+.assurance__garantie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
+.assurance__garantie #a {
+  margin-top: 30px;
+}
+.assurance__garantie div {
+  display: flex;
+}
+.assurance__garantie div ~ div {
+  margin: 15px 0;
+}
+.assurance__garantie .hr {
+  grid-area: hr;
+  height: 2px;
+  border: 0;
+  background: #000;
+  width: 100%;
+}
+.assurance__garantie p {
+  margin-left: 15px;
+  margin-top: 33px;
+}
+
+#deuxieme {
+  font-size: 40px;
+}
+
+.carousel {
+  padding: 20px;
+  perspective: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carousel > * {
+  flex: 0 0 auto;
+}
+.carousel figure {
+  margin: 0;
+  width: 400px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform-origin: 50% 50% -482.8427124746px;
+}
+.carousel figure img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+  opacity: 0.9;
+}
+.carousel figure img:not(:first-of-type) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 50% 50% -482.8427124746px;
+}
+.carousel figure img:nth-child(2) {
+  transform: rotateY(0.7853981634rad);
+}
+.carousel figure img:nth-child(3) {
+  transform: rotateY(1.5707963268rad);
+}
+.carousel figure img:nth-child(4) {
+  transform: rotateY(2.3561944902rad);
+}
+.carousel figure img:nth-child(5) {
+  transform: rotateY(3.1415926536rad);
+}
+.carousel figure img:nth-child(6) {
+  transform: rotateY(3.926990817rad);
+}
+.carousel figure img:nth-child(7) {
+  transform: rotateY(4.7123889804rad);
+}
+.carousel figure img:nth-child(8) {
+  transform: rotateY(5.4977871438rad);
+}
+.carousel .rond {
+  display: none;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FED51B;
+}
+.carousel .rond img {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+.carousel nav {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0;
+}
+.carousel nav button {
+  flex: 0 0 auto;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #333;
+  background: none;
+  border: 1px solid;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+}
+
+.avis__client {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+a#backToTop {
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  right: 20px;
+  opacity: 1;
+  z-index: 99999;
+  transition: all ease-in 0.2s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  text-decoration: none;
+}
+
+a#backToTop:before {
+  content: "▲";
+}
+
+a#backToTop:hover {
+  background: black;
+  transition: all ease-in 0.2s;
+}
+
+a#backToTop.cInvisible {
+  bottom: -35px;
+  opacity: 0;
+  transition: all ease-in 0.5s;
+}
+
+a#backToTop.cVisible {
+  bottom: 20px;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1267px) {
+  .container__margin {
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .div__tellus p {
+    padding: 0 50px;
+  }
+
+  .raisons {
+    display: grid;
+    grid-template-columns: 1fr 27px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "rapidite stars1 ecoute" "qualite stars3 leadership";
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 80%;
+    margin: auto;
+    min-width: 80%;
+  }
+  .raisons .item__raisons {
+    padding: 0;
+  }
+  .raisons .fast {
+    grid-area: rapidite;
+    width: 100%;
+    margin-left: 50px;
+  }
+  .raisons .listen {
+    grid-area: ecoute;
+    width: 100%;
+    margin-right: 50px;
+  }
+  .raisons .quality {
+    grid-area: qualite;
+    width: 100%;
+    margin-left: 50px;
+  }
+  .raisons .leadership {
+    grid-area: leadership;
+    width: 100%;
+    margin-right: 50px;
+  }
+  .raisons .stars1 {
+    grid-area: stars1;
+  }
+  .raisons .stars3 {
+    grid-area: stars3;
+  }
+  .raisons .stars2 {
+    display: none;
+  }
+
+  #form__index {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "agence ou" "envoyer envoyer";
+    grid-column-gap: 50px;
+  }
+  #form__index .submit2 {
+    display: none;
+  }
+  #form__index .select__input2 {
+    display: none;
+  }
+  #form__index input, #form__index select {
+    width: 40%;
+  }
+  #form__index .select__index {
+    grid-area: agence;
+    width: 100%;
+    margin-left: 15px;
+  }
+  #form__index .decouvrez__input {
+    grid-area: ou;
+    width: 100%;
+    margin-left: -15px;
+  }
+  #form__index .submit__index {
+    grid-area: envoyer;
+    width: 100%;
+  }
+
+  .entreprise1 {
+    display: none;
+  }
+
+  .item__entreprise {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rond {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FED51B;
+  }
+  .rond img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+  }
+
+  .entreprise__left__telephone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px 1fr;
+    grid-template-areas: "entreprise agences" "maisons experiences" "parainnage parainnage";
+    justify-items: center;
+    align-items: center;
+  }
+  .entreprise__left__telephone .entreprise {
+    grid-area: entreprise;
+  }
+  .entreprise__left__telephone .agences {
+    grid-area: agences;
+  }
+  .entreprise__left__telephone .maisons {
+    grid-area: maisons;
+  }
+  .entreprise__left__telephone .experiences {
+    grid-area: experiences;
+  }
+  .entreprise__left__telephone .entreprise__right2 {
+    grid-area: parainnage;
+  }
+
+  .modeles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "modele titreModele" "village titreModele";
+    justify-items: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px solid #FED51B;
+  }
+  .modeles h2 {
+    grid-area: titreModele;
+    padding: 0 10px;
+    padding-left: 55px;
+  }
+  .modeles .modele__editable {
+    grid-area: modele;
+    border: 2px solid white;
+  }
+  .modeles .village__3d {
+    grid-area: village;
+    border: 2px solid white;
+  }
+
+  .assurance__garantie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "reponsabilite dommage" "chantiers civile" "hr hr" "remboursement livraison" "achevement soustraitants";
+    align-items: center;
+    margin: 0 auto;
+    grid-gap: 30px;
+    padding: 50px;
+    margin-top: 40px;
+  }
+  .assurance__garantie div {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+  .assurance__garantie div p {
+    margin-left: 15px;
+  }
+  .assurance__garantie .responsabilite {
+    grid-area: reponsabilite;
+  }
+  .assurance__garantie .dommage {
+    grid-area: dommage;
+  }
+  .assurance__garantie .chantiers {
+    grid-area: chantiers;
+  }
+  .assurance__garantie .civile {
+    grid-area: civile;
+  }
+  .assurance__garantie .remboursement {
+    grid-area: remboursement;
+  }
+  .assurance__garantie .livraison {
+    grid-area: livraison;
+  }
+  .assurance__garantie .achevement {
+    grid-area: achevement;
+  }
+  .assurance__garantie .soustraitants {
+    grid-area: soustraitants;
+  }
+
+  .hr {
+    grid-area: hr;
+    width: 100%;
+    height: 1px;
+    background: #000;
+  }
+}
+@media screen and (min-width: 1268px) {
+  .div__tellus p {
+    padding: 0 50px;
+  }
+
+  .raisons {
+    flex-direction: row;
+  }
+  .raisons .item__raisons p {
+    margin-top: 0;
+  }
+
+  #form__index {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "optionAgence submit";
+    justify-items: center;
+    align-items: center;
+    grid-gap: 50px;
+    margin-top: 20px;
+  }
+  #form__index .decouvrez__input1 {
+    display: none;
+  }
+  #form__index .submit__index1 {
+    display: none;
+  }
+  #form__index .select__index1 {
+    display: none;
+  }
+  #form__index .select__input2 {
+    display: block;
+    grid-area: optionAgence;
+    width: 100%;
+  }
+  #form__index .select__input2 .decouvrez__input {
+    margin-left: 0;
+    width: 100%;
+    padding: 0 15px;
+  }
+  #form__index .select__input2 .select__index {
+    margin-left: 0;
+    width: 100%;
+  }
+  #form__index .submit2 {
+    display: block;
+    width: 100%;
+    grid-area: submit;
+  }
+  #form__index .submit2 .submit__index {
+    width: 100%;
+    height: 100px;
+    border: 2px solid #000;
+  }
+
+  .entreprise__left {
+    display: none;
+  }
+
+  .rond {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FED51B;
+  }
+  .rond img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+  }
+
+  .entreprise__left {
+    display: none;
+  }
+
+  .entreprise__right1 {
+    display: none;
+  }
+
+  .item__entreprise {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .entreprise__left__telephone {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "entreprise agences parainnage parainnage" "maisons experiences parainnage parainnage";
+    justify-items: center;
+    align-items: center;
+    margin-top: 70px;
+  }
+  .entreprise__left__telephone .entreprise {
+    grid-area: entreprise;
+  }
+  .entreprise__left__telephone .agences {
+    grid-area: agences;
+  }
+  .entreprise__left__telephone .maisons {
+    grid-area: maisons;
+  }
+  .entreprise__left__telephone .experiences {
+    grid-area: experiences;
+  }
+  .entreprise__left__telephone .entreprise__right2 {
+    grid-area: parainnage;
+  }
+
+  .modeles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 35px;
+  }
+
+  h2 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  .modele__editable {
+    margin-bottom: 0;
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .village__3d {
+    margin-top: 0;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .assurance__garantie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "reponsabilite dommage" "chantiers civile" "hr hr" "remboursement livraison" "achevement soustraitants";
+    align-items: center;
+    margin: 0 auto;
+    grid-gap: 30px;
+    padding: 50px;
+    margin-top: 40px;
+    position: relative;
+    left: 6%;
+  }
+  .assurance__garantie div {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+  .assurance__garantie div p {
+    margin-left: 15px;
+  }
+  .assurance__garantie .responsabilite {
+    grid-area: reponsabilite;
+  }
+  .assurance__garantie .dommage {
+    grid-area: dommage;
+  }
+  .assurance__garantie .chantiers {
+    grid-area: chantiers;
+  }
+  .assurance__garantie .civile {
+    grid-area: civile;
+  }
+  .assurance__garantie .remboursement {
+    grid-area: remboursement;
+  }
+  .assurance__garantie .livraison {
+    grid-area: livraison;
+  }
+  .assurance__garantie .achevement {
+    grid-area: achevement;
+  }
+  .assurance__garantie .soustraitants {
+    grid-area: soustraitants;
+  }
+  .assurance__garantie .hr {
+    grid-area: hr;
+    margin-left: -332px;
+    width: 150%;
+    max-width: 150%;
+    min-width: 150%;
+  }
+}
+@media screen and (min-width: 1268px) {
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1fr 4px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "footerleft footerhr footerright";
+    justify-items: center;
+    align-items: center;
+  }
+
+  .footer__left {
+    grid-area: footerleft;
+    width: 100%;
+  }
+
+  .ul__left h1 {
+    margin: 0;
+    margin-top: -20px;
+  }
+
+  .footer__right {
+    grid-area: footerright;
+    width: 100%;
+    text-align: right;
+  }
+
+  .ul__right > li > h3 {
+    width: 100%;
+  }
+
+  .hr__footer {
+    grid-area: footerhr;
+    margin: 0;
+    border: 0;
+    width: 2px;
+    height: 80%;
+    color: #FED51B;
+    background: #FED51B;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

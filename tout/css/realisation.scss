@@ -1,0 +1,235 @@
+$bleu : #023F88;
+
+@mixin bleu-lighten {
+  background-color: lighten($bleu, 10%);
+}
+
+@mixin bleu-lighten-transition {
+  transition: background-color ease-out 250ms;
+}
+
+.main-realisation{
+  margin-top: 100px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.logo-maximize{
+  
+}
+
+.top-realisation{
+  margin-bottom: 30px;
+}
+
+.title-realisation{
+  color: $bleu;
+  text-align: center;
+  margin-bottom: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.desc-realisation{
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+  color: #000;
+
+  p{
+    display: inline;
+    border-bottom: 1px solid #000;
+  }
+}
+
+
+.slick-track{
+  background-color: #FFFFFF !important;
+}
+
+.slick-prev::before, .slick-next::before{
+  color: $bleu !important;
+  font-size: 35px !important;
+}
+
+.slick-prev{
+  left: -40px !important;
+  border-radius: unset;
+}
+
+.slick-next{
+  right: -27px !important;
+  border-radius: unset;
+}
+
+@media screen and (max-width: 759px) {
+  #carousel1 {
+    padding: 0 21px;
+  }
+}
+
+.item-realisation {
+  margin: 40px 10px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+  transition: transform 0.3s;
+  transform: translate3d(0, -1px, 0);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  @media screen and (min-width: 960px) {
+    &:hover {
+      transform: translate3d(0, -10px, 0);
+    }
+  }
+}
+
+.image-realisation {
+  padding: 10px;
+
+  img {
+      display: block;
+      width: 100%;
+      height: auto;
+  }
+}
+
+  .item-body-slider {
+    padding: 25px;
+    background: #023F88;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    @include bleu-lighten-transition;
+
+    &:hover {
+      @include bleu-lighten;
+    }
+  }
+
+  .item-title-slider {
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 20px;
+    color: #fff;
+    margin: 5px 0;
+  }
+
+  .item-description-slider {
+    margin: 5px 0;
+    text-align: center;
+
+    a {
+      margin: 5px 0;
+      color: #DBDADA;
+      font-style: normal;
+      font-size: 16px;
+      text-decoration: none;
+    }
+  }
+
+  .items {
+    position: relative;
+  }
+
+
+  .hr-between {
+    margin: 85px auto;
+    margin-top: 55px !important;
+    width: 35%;
+    height: 1px;
+    background-color: #000;
+  }
+
+  .bottom-realisation {
+    width: 100%;
+    max-width: 810px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    grid-column-gap: 20px;
+    transition: max-width 250ms ease-out;
+
+    @media screen and (max-width: 950px) {
+      max-width: 600px;
+    }
+
+    @media screen and (max-width: 759px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: none;
+      padding: 0 31px;
+    }
+  }
+
+  .big-img {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: -9px;
+
+    @media screen and (max-width: 759px) {
+      margin-left: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .div-big-info {
+    margin-right: -42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 759px) {
+      margin-right: 0;
+    }
+  }
+
+  .big-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    h1 {
+      color: $bleu;
+    }
+
+    p {
+      text-transform: none;
+      text-align: center;
+    }
+
+    li {
+      margin: 20px 0;
+    }
+
+    a {
+      font-size: 18px;
+      text-transform: none;
+      padding: 10px 18px;
+      border: 1px solid $bleu;
+      background-color: transparent;
+      color: $bleu;
+      transition: all 250ms ease-out;
+
+      &:hover {
+        background-color: $bleu;
+        color: #FFF;
+        transform: none;
+        padding: 10px 18px;
+        border: 1px solid $bleu;
+      }
+    }
+  }
+
